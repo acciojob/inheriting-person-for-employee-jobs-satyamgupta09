@@ -57,11 +57,8 @@ Person.prototype.greet = function(){
 }
 
 function Employee(name, age, jobTitle) {
-	this.name = name;
-	this.age = age;
+	Person.call(this,name,age);
 	this.jobTitle = jobTitle;
-
-	__proto__=Person;
 }
 
 Employee.prototype.jobGreet = function(){
